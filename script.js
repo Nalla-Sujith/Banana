@@ -18,7 +18,7 @@ function clickhandler()
     fetch(getURL(textintextarea))
     .then(response=>response.json())
     .then(json=>{
-      var translatedText = json.contents.translated;
+      var translatedText = json.contents['translation'];
       outputdiv.innerText = translatedText;
     }) 
     .catch(errorhandler)
