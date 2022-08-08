@@ -1,9 +1,9 @@
 var textareabutton=document.querySelector(".text-area")
 var button=document.querySelector(".nav-button")
-var outputdiv=document.querySelector("nav-output")
-//const URL="https://api.funtranslations.com/translate/minion.json"
+var outputdiv=document.querySelector(".nav-output")
+const URL="https://api.funtranslations.com/translate/minion.json"
 
-const URL="https://api.funtranslations.com/translate/dothraki.json"
+//const URL="https://api.funtranslations.com/translate/dothraki.json"
 function getURL(text)
 {
   return URL+"?text="+text;
@@ -22,5 +22,6 @@ function clickhandler()
       outputdiv.innerText = translatedText;
     }) 
     .catch(errorhandler)
+   
 }
 button.addEventListener("click",clickhandler)
